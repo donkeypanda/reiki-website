@@ -109,11 +109,69 @@ nav a {
 }
 
 /* CONTACT */
+/* 
+.contact {
+  background: #e6def0;
+  padding: 60px;
+  text-align: center;
+} */
+
+/* CONTACT */
 
 .contact {
   background: #e6def0;
   padding: 60px;
   text-align: center;
+}
+
+.contact-form {
+  max-width: 420px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  background: #6b5fa7;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background: #594f90;
+}
+
+/* SUCCESS MESSAGE */
+
+.success-message {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 form {

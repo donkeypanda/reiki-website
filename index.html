@@ -94,7 +94,12 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
 
-  <h2>Contact Me</h2>
+  <div id="successBox" style="display:none;" class="success-message">
+    Thank you! Your message has been sent successfully.
+  </div>
+
+<!-- 
+  <h2>Contact Me</h2> -->
 
   <!-- <form>
     <input type="text" placeholder="Your Name">
@@ -103,24 +108,29 @@
     <button>Send</button>
   </form> -->
 
-  <form action="https://formsubmit.co/41ca11ffbaac175b2438a0035c9d565b" method="POST">
-    <!-- Your Name -->
+
+  <form action="https://formsubmit.co/41ca11ffbaac175b2438a0035c9d565b" method="POST" class="contact-form">
+  
     <input type="text" name="name" placeholder="Your Name" required>
   
-    <!-- Your Email -->
     <input type="email" name="email" placeholder="Your Email" required>
   
-    <!-- Message -->
     <textarea name="message" placeholder="Your Message" required></textarea>
   
-    <!-- Submit Button -->
-    <button type="submit">Send</button>
+    <button type="submit">Send Message</button>
   
-    <!-- Optional: prevent spam -->
+    <!-- Disable captcha -->
     <input type="hidden" name="_captcha" value="false">
   
-    <!-- Optional: redirect to thank you page -->
-    <!-- <input type="hidden" name="_next" value="https://yourusername.github.io/thank-you.html"> -->
+    <!-- Custom email subject -->
+    <input type="hidden" name="_subject" value="New Reiki Website Contact Message">
+  
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next" value="https://yourusername.github.io/reiki-website/?success=true">
+  
+    <!-- Spam protection -->
+    <input type="text" name="_honey" style="display:none">
+  
   </form>
 
 
@@ -130,6 +140,15 @@
 <footer>
   © 2026 Reiki Harmony
 </footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("success") === "true") {
+    document.getElementById("successBox").style.display = "block";
+  }
+</script>
+
 
 </body>
 </html>
