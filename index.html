@@ -96,12 +96,33 @@
 
   <h2>Contact Me</h2>
 
-  <form>
+  <!-- <form>
     <input type="text" placeholder="Your Name">
     <input type="email" placeholder="Your Email">
     <textarea placeholder="Your Message"></textarea>
     <button>Send</button>
+  </form> -->
+
+  <form action="https://formsubmit.co/41ca11ffbaac175b2438a0035c9d565b" method="POST">
+    <!-- Your Name -->
+    <input type="text" name="name" placeholder="Your Name" required>
+  
+    <!-- Your Email -->
+    <input type="email" name="email" placeholder="Your Email" required>
+  
+    <!-- Message -->
+    <textarea name="message" placeholder="Your Message" required></textarea>
+  
+    <!-- Submit Button -->
+    <button type="submit">Send</button>
+  
+    <!-- Optional: prevent spam -->
+    <input type="hidden" name="_captcha" value="false">
+  
+    <!-- Optional: redirect to thank you page -->
+    <!-- <input type="hidden" name="_next" value="https://yourusername.github.io/thank-you.html"> -->
   </form>
+
 
 </section>
 
